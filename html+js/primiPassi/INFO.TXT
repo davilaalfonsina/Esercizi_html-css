@@ -1,0 +1,47 @@
+- - - - COMBINAZIONI DI TASTI - - - -
+
+cntrl + s  -> salva
+
+cntrl + a  -> seleziona tutto
+
+cntrl + c  -> copia
+
+cntrl + v  -> incolla
+
+cntrl + z  -> torna allo stato precedente ( "annulla" )
+
+cntrl + y  -> vai allo stato successivo 
+
+cntrl + x  -> taglia
+
+cntrl +   -> ZOOM IN                
+
+cntrl -   -> ZOOM OUT
+
+
+
+--------------------------------------------------------------------------
+
+
+
+INDENTAZIONE ->     metodo per scrivere codice in modo 
+                    strutturato per capire visivamente gli elementi 
+
+
+--------------------------------------------------------------------------
+
+ACCESSI CLASSI CLASSI
+
+        . (punto)  accedo ad una CLASSE
+
+        # (HASHTAG) accedo ad un ID
+
+        h2 -> accesso con tag
+
+
+la prevalenza della classi è :
+
+  h2 --> # ---> .classe
+
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Voti Classe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input {
+            width: 50px;
+            margin-right: 10px;
+        }
+        #risultato {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Calcolo della Media Voti di una Classe</h2>
+    
+    <p>Inserisci i voti dei 5 studenti (da 0 a 10):</p>
+    
+    <input type="number" id="voto1" min="0" max="10" step="0.1">
+    <input type="number" id="voto2" min="0" max="10" step="0.1">
+    <input type="number" id="voto3" min="0" max="10" step="0.1">
+    <input type="number" id="voto4" min="0" max="10" step="0.1">
+    <input type="number" id="voto5" min="0" max="10" step="0.1">
+    
+    <br><br>
+    <button onclick="calcolaMedia()">Calcola Media</button>
+    
+    <div id="risultato"></div>
+
+    <script>
+        function calcolaMedia() {
+            let voti = [];
+            for (let i = 1; i <= 5; i++) {
+                let voto = parseFloat(document.getElementById('voto' + i).value);
+                if (isNaN(voto) || voto < 0 || voto > 10) {
+                    document.getElementById('risultato').innerHTML = " Tutti i voti devono essere numeri tra 0 e 10.";
+                    return;
+                }
+                voti.push(voto);
+            }
+
+            let somma = voti.reduce((acc, val) => acc + val, 0);
+            let media = somma / voti.length;
+
+            let messaggio = "La media della classe è: " + media.toFixed(2) + "<br>";
+
+            if (media >= 6) {
+                messaggio += " La classe è <strong>PROMOSSA</strong> ";
+            } else {
+                messaggio += " La classe è <strong>BOCCIATA</strong> ";
+            }
+
+            document.getElementById('risultato').innerHTML = messaggio;
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+let voti = [7, 9, 6, 8, 5];
+
+function calcolaMedia(voti) {
+    let somma = 0;
+    for (let i = 0; i < voti.length; i++) {
+        somma += voti[i];
+    }
+    return somma / voti.length;
+}
+
+let mediaClasse = calcolaMedia(voti);
+
+console.log("La media della classe è: " + mediaClasse.toFixed(2));
+
+if (mediaClasse >= 6) {
+    console.log("La classe è PROMOSSA");
+} else {
+    console.log("La classe è BOCCIATA");
+}

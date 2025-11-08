@@ -1,0 +1,100 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi - Bottoni</title>
+</head>
+<body>
+
+    <!--button-->
+    <button id="mostraMessaggio">Clicca per salutare</button>
+    
+
+    <!--cambiare testo al click -->
+    <p id="testo">Questo testo cambierà quando clicchi sul bottone</p>
+    <button id="cambiaTesto">Cambia testo</button>
+
+    <!--Cambiare colore dello sfondo-->
+    <button id="cambiaColore">Cambia colore</button>
+
+
+    <!--Contatore al click-->
+    <p>Hai cliccato <span id="contatore">0</span> volte</p>
+    <button id="contaBtn">Contatore</button>
+
+
+    <!--Effetti Toggle -> Mostro/Nascondo un elemento-->
+    <p id="testoNascosto" style="display: none">Mi vedi?</p>
+    <button id="toggleBtn">Mostra testo</button>
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+// Vado a prendere il tag che contiene l id "mostraMessaggio" nell html
+const bottone = document.getElementById("mostraMessaggio");
+
+bottone.addEventListener("click", function(){
+
+    alert("Ciao hai cliccato il bottone");
+    console.log("ciao hai cliccato");
+    
+
+});
+
+
+//cambiare il testo del p con il click sul bottone
+const btnCambiaTesto = document.getElementById("cambiaTesto");
+const testo = document.getElementById("testo");
+
+btnCambiaTesto.addEventListener("click", function(){
+
+    testo.textContent = "Hai cliccato , il testo è cambiato";
+
+});
+
+
+//cambia colore della pagina
+const btnColore = document.getElementById("cambiaColore");
+
+btnColore.addEventListener("click", function(){
+
+    document.body.style.backgroundColor = "coral";
+
+});
+
+
+
+//CONTATORE AL CLICK
+const contaBtn = document.getElementById("contaBtn");
+const contatore = document.getElementById("contatore");
+
+let numero = 0; //variabile per tenere il conto
+
+contaBtn.addEventListener("click", function(){
+
+    numero++;
+    contatore.textContent = numero;
+
+});
+
+
+//Effetto Toggle Mostro nascondo elemento
+const toggleBtn = document.getElementById("toggleBtn");
+const testoNascosto = document.getElementById("testoNascosto");
+
+toggleBtn.addEventListener("click", function(){
+
+    testoNascosto.style.display = "inline";
+
+});

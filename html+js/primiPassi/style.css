@@ -1,0 +1,45 @@
+/*questo è un commento*/
+.miocolore {
+
+    color: blue;  
+}
+
+
+
+.pesantezza_font_200{
+
+    font-weight: 200;
+}
+
+
+
+.miocoloreRosso {
+
+    color: red;
+}
+
+
+#viola {
+
+    color: violet;
+}
+
+
+/*colore con esadecimale*/
+h1 {
+
+    color: #902222;
+}
+
+/*colore parlante*/
+h2 {
+
+    color: coral;
+}
+
+/*colore rgb*/
+h3 {
+
+    color: rgb(142, 80, 58);
+}
+

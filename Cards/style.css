@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* REGOLE BASE */
+
+/* Proprietà Body */
+body {
+  background-color: rgb(43, 39, 39);
+  color: white;
+  height: 100vh; /* altezza pagina vieport height */
+  width: 100vw;
+  position: relative;
+}
+
+.site-header {
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 2%;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.site-nav {
+  margin-top: 20px;
+  display: block;
+  top: 16%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+
+.site-nav ul {
+  list-style-type: none;
+  position: relative;
+  text-decoration: none;
+}
+
+.site-nav li {
+  text-decoration: none;
+  display: inline-block; /*dispone gli elementi <li> in linea e non piu incolonnati*/
+  margin: 0 2%;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 25%;
+  left: 0;
+  width: 30%; /* larghezza cnt*/
+  height: 60%; /* altezza cnt*/
+  padding: 2%;
+}
+
+.main-content {
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 2%;
+  overflow-y: auto; /* mi da la possibilità di avere lo scorrimento solo nel contesto del main*/
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  padding-top: 2%;
+}
+
+.card {
+  margin: 20px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.cardImage {
+  border-radius: 10px;
+}
+
+/*------------------------------------ PAGINA HOME -------------------------------*/
+
+/*------------------------------------ PAGINA ABOUT US -------------------------------*/
+
+/*------------------------------------ PAGINA CONTACT -------------------------------*/
+
+/*------------------------------------ PAGINA SERVICES -------------------------------*/
+
+
+

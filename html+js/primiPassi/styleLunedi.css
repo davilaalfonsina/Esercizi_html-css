@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    background-color: coral;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.heading_personale{
+
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+
+}
+
+.p_personale{
+
+    color: blue;
+    font-weight: 200;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+
+}
+
+.p_personale2{
+
+    color: yellow;
+    font-weight: 200;
+    padding: 15px;
+    border: 1px solid black;
+    margin: 5px;
+
+}
+
+.p_personale3{
+
+    color: violet;
+    font-weight: 200;
+    padding: 15px;
+    border: 1px solid black;
+    margin: 5px;
+
+}
+
+
+img {
+
+    filter: contrast(1) 
+            drop-shadow(0rem 0rem 0rem orange) 
+            grayscale(1) 
+            hue-rotate(0turn) 
+            invert(0) 
+            opacity(1) 
+            saturate(1) 
+            sepia(0);
+}
+
+
+
+

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<!-- Questo è l HEAD , include le importazioni di altri file(js, css, altri...) -->   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prima lezione HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+    <!-- Questo è il Body -->            
+    <body>
+
+
+        <!-- Elementi semplici -->
+
+        <!-- Questi sono gli H "heading" --> 
+        <h1>Titolo H1</h1>
+        <h2>Titolo H2</h2>
+        <h3>Titolo H3</h3>
+        <h4>Titolo H4</h4>
+        <h5>Titolo H5</h5>
+        <h6><em>Titolo H6</em></h6>
+
+        <!-- Queste sono proprietà di un tag ( ma è anche lui un tag ) -->
+        <strong>Grassetto</strong>
+        <em>Corsivo</em>
+        <u>Sottolineato</u>
+        <mark>Evidenziato</mark>
+        <small>piccolo</small>
+        <q>Citazione</q>
+        <p><strong>paragrafo in corsivo</strong></p>
+
+        <!-- Questo è un paragrafo --> 
+        <p>Paragrafo</p>
+        <br> <!-- Questa è un interruzione di riga "tag self closed" --> 
+        <p>Paragrafo2</p>
+        <hr> <!-- Questa è una riga "tag self closed" -->
+
+        
+        
+        <!-- LISTE -->
+
+        <ul>Lista non ordinata</ul>  <!-- lista non ordinata -->
+        <ol>Lista ordinata</ol>  <!-- lista ordinata -->
+        <li>Elemento 1</li>  <!-- elemento dell lista -->
+
+        <ul>
+            <li>elemento 1</li>
+            <li>elemento 2</li>
+            <li>elemento 3</li>
+            <li>elemento 4</li>
+            <li>elemento 5</li>
+        </ul>
+
+        <ol>
+            <li>primo elemento</li>
+            <li>secondo</li>
+            <li>terzo</li>
+            <li>quarto</li>
+            <li>quindto</li>
+        </ol>
+
+        <hr><br>
+
+        <!-- TABELLE -->
+
+        <table>Tabella</table> <!-- Tabella -->
+        <tr>Riga della tabella</tr>
+        <td></td> <!-- Cella di dati -->
+        <th></th> <!-- Instestazione colonna -->
+        <thead></thead> <!-- Instestazione della tabella -->
+        <tbody></tbody> <!-- corpo della tabella -->
+        <tfoot></tfoot> <!-- Footer tabella -->
+        <caption></caption> <!-- Titolo della tabella-->
+
+        <!--Esempio tabella con tag combinati -->
+        <table border="1" cellpadding="8" cellspacing="0">
+            <caption>Elementi principali della tabella HTML</caption>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Descrizione</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>table</td> <!--escape -->
+                    <td>Tabella</td>
+                </tr>
+                <tr>
+                    <td>tr</td> <!--escape -->
+                    <td>Riga di tabella</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        Fine della tabella
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br>
+        <hr>
+        <br>
+
+
+
+        <!-- FORM E INPUT -->
+
+        <form action=""></form>  <!-- modello di input -->
+        <input type="text"> <!-- input -->
+        <textarea name="" id=""></textarea> <!-- area di testo multilinea -->
+        <select name="" id=""></select> <!-- menu a discesa  -->
+        <option value="">scegli</option> <!-- opzione di menu -->
+        <label for="">Bottone : </label> <!-- Etichetta del campo -->
+        <button>Clicca</button> <!-- Bottoni -->
+    
+
+        <br>
+        <hr>
+        <br>
+
+
+
+
+
+        <!-- Elementi STRUTTURA E LAYOUT -->
+
+        <div>Container generico di qualcosa</div>  <!-- puo' contenere altri div, altri tag , è un contesto del layout Occupa una riga e va a capo -->
+        <span>Container</span> <!-- contenitore generico ma inline -->
+        <header>Intestazione della pagina</header>
+        <nav>Sezione per i link</nav>
+        <section>Sezione</section>
+        <article>Articolo</article>
+        <aside>Contenuto laterale</aside>
+        <footer>Piè di pagina</footer>
+        <main>Contenuto principale della pagina</main>
+
+
+
+        <!-- MEDIA -->
+
+        <!-- è cliccabile e con attributo "target" apre nuova pagina --> 
+        <a href="https://www.google.it" target="_blank"  >Link Ipertestuale</a> 
+        
+        <!-- immagine da url url da insierire tra i doppi apici! -->
+        <img src="" alt="">
+        
+        <!-- immagine da locale -->
+        <img src="img/raccon.jfif" alt="">
+        <img src="img/cavallo.jfif" alt="">
+        
+
+        <!-- video--> 
+        <video src=""></video>
+
+        <!-- audio--> 
+        <audio src=""></audio>
+        
+        <!-- raggruppa contenuto multimediale e descrizione -->  
+        <figure></figure>
+        
+        <!-- didascalia di figure -->  
+        <figcaption></figcaption>
+        
+        <!-- Finestra incorporata ( es. : video youtube ) -->  
+        <iframe src="" frameborder="0"></iframe>
+
+
+
+        
+        <!-- SCRIPT E COLLEGAMENTI ESTERNI -->
+
+        <!--importazioni file-->
+        <link rel="stylesheet" href=""> <!-- collega file esterni (CSS, etc..) -->
+
+        <!--codice JS-->
+        <script>
+        
+            let numero1 = 5;
+            let numero2 = 10;
+            console.log("Questa è la stampa del valore del numero1 :" , numero1);
+            console.log("Questa è la stampa del valore del numero2 :" , numero2);
+        
+        </script> <!-- inserisce o collega un codice Javascript -->
+
+
+        <!--codice CSS-->
+        <style>
+
+            li{
+                color: black;
+            }
+
+        </style> <!-- inserisce codice CSS  -->
+
+        <meta> <!-- Metadati(descrione , viewport, favicon) -->
+
+    </body>
+
+</html>

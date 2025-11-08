@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercizio Interattivo HTML5</title>
+  <style>
+    /* === CSS === */
+    body {
+      background-color: #d3d3d3; /* Sfondo grigio */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    .square-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .square {
+      width: 120px;
+      height: 120px;
+      background-color: steelblue;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .square:hover {
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #textSection p {
+      font-size: 1.1rem;
+      color: #222;
+      user-select: none;
+    }
+
+    #hiddenText {
+      display: none;
+      color: darkred;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- === HEADER === -->
+  <header>
+    <h1>Esercizio Interattivo HTML5</h1>
+  </header>
+
+  <!-- === MAIN === -->
+  <main>
+    <!-- Sezione quadrati -->
+    <section aria-label="Quadrati interattivi">
+      <h2>Quadrati che cambiano colore</h2>
+      <div class="square-container">
+        <article>
+          <div class="square" id="square1"></div>
+          <button type="button">Bottone 1</button>
+        </article>
+
+        <article>
+          <div class="square" id="square2"></div>
+          <button type="button">Bottone 2</button>
+        </article>
+
+        <article>
+          <div class="square" id="square3"></div>
+          <button type="button">Bottone 3</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sezione paragrafo interattivo -->
+    <section id="textSection" aria-label="Paragrafo interattivo">
+      <h2>Paragrafo interattivo</h2>
+      <p id="mainParagraph">Fai doppio click su questo testo </p>
+      <p id="hiddenText">✨ Hai rivelato il testo segreto! </p>
+    </section>
+  </main>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <p>Creato con HTML5, CSS e JavaScript — Esempio interattivo</p>
+  </footer>
+
+  <!-- === JAVASCRIPT === -->
+  <script>
+    // Quadrati: cambio colore al passaggio del mouse
+    const squares = document.querySelectorAll('.square');
+
+    squares.forEach(square => {
+      square.addEventListener('mouseenter', () => {
+        square.style.backgroundColor = 'tomato';
+      });
+
+      square.addEventListener('mouseleave', () => {
+        square.style.backgroundColor = 'steelblue';
+      });
+
+      // Bottone associato a ciascun quadrato
+      const button = square.nextElementSibling;
+      button.addEventListener('click', () => {
+        alert(`Hai cliccato il bottone del ${square.id}!`);
+      });
+    });
+
+    // Paragrafo: doppio click mostra/nasconde testo nascosto
+    const paragraph = document.getElementById('mainParagraph');
+    const hiddenText = document.getElementById('hiddenText');
+
+    paragraph.addEventListener('dblclick', () => {
+      hiddenText.style.display = hiddenText.style.display === 'none' ? 'block' : 'none';
+    });
+
+    // Eventi tastiera: frecce su e giù
+    document.addEventListener('keydown', event => {
+      if (event.key === 'ArrowUp') {
+        alert('Hai premuto la freccia SU');
+      } else if (event.key === 'ArrowDown') {
+        console.log('Hai premuto la freccia GIÙ ');
+      }
+    });
+  </script>
+</body>
+</html>

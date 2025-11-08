@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    /* ====== Stile base ====== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* ====== Contenitore principale ====== */
+    .main-container {
+      width: 90%;
+      max-width: 1100px;
+      background: #f5f5dc; /* beige chiaro */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ====== Header ====== */
+    header {
+      background-color: #66bb6a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    /* ====== Menu ====== */
+    nav {
+      background-color: #43a047;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #2e7d32;
+    }
+
+    /* ====== Sezione contenuto ====== */
+    .content {
+      display: flex;
+      flex: 1;
+      padding: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* ====== Colonna sinistra ====== */
+    .left {
+      flex: 1;
+      min-width: 250px;
+      background: #f0fff0; /* verde molto chiaro */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .left .item {
+      background: #c8e6c9;
+      color: #2e7d32;
+      text-align: center;
+      padding: 15px 0;
+      margin: 5px 0;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* ====== Colonna destra ====== */
+    .right {
+      flex: 1;
+      min-width: 250px;
+      background: #f0fff0; /* verde molto chiaro */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+      padding: 15px;
+      gap: 10px;
+      border-radius: 8px;
+    }
+
+    .right .item {
+      flex: 0 0 calc(33.33% - 10px);
+      background: #c8e6c9;
+      color: #2e7d32;
+      text-align: center;
+      padding: 25px 0;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* ====== Footer ====== */
+    footer {
+      background-color: #66bb6a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 700px) {
+      .content {
+        flex-direction: column;
+      }
+      .right .item {
+        flex: 0 0 calc(33.33% - 5px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Header -->
+    <header>
+      <h1>Il Mio Sito Flexbox</h1>
+    </header>
+
+    <!-- Menu -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Chi siamo</a>
+      <a href="#">Servizi</a>
+      <a href="#">Contatti</a>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <div class="content">
+      <!-- Colonna sinistra (10 elementi decrescenti) -->
+      <div class="left">
+        <div class="item">10</div>
+        <div class="item">9</div>
+        <div class="item">8</div>
+        <div class="item">7</div>
+        <div class="item">6</div>
+        <div class="item">5</div>
+        <div class="item">4</div>
+        <div class="item">3</div>
+        <div class="item">2</div>
+        <div class="item">1</div>
+      </div>
+
+      <!-- Colonna destra (9 elementi in 3x3) -->
+      <div class="right">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+  </div>
+</body>
+</html>
